@@ -1,0 +1,37 @@
+{
+  "name": "dist",
+  "homepage": "https://github.com/GiveWithImpact/give-website",
+  "authors": [
+    "Barry Jones <barry@onalldevices.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-youtube-mb": "~1.1.1",
+    "angular": "1.4.7",
+    "html5shiv": "~3.7.3",
+    "jquery": "1.11.3",
+    "respond": "~1.4.2",
+    "moment": "~2.10.6",
+    "angular-bootstrap": "~0.14.3",
+    "angular-ui-router": "~0.2.15",
+    "lodash": "~3.10.1",
+    "angular-local-storage": "~0.2.3",
+    "angular-animate": "~1.4.7",
+    "angular-sanitize": "~1.4.7",
+    "angular-resource": "~1.4.7",
+    "angular-touch": "~1.4.7"
+  }
+}

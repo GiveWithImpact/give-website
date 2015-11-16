@@ -1,0 +1,76 @@
+.notifications{
+
+	display: block;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	text-align: center;
+	pointer-events: none;
+
+	.notifications__wrapper{
+
+		display: block;
+		width: 100%;
+		height: auto;
+		pointer-events: none;
+
+		.notifications__alert{
+
+			display: inline-block;
+			position: relative;
+			text-align: center;
+			width: auto;
+			margin: 0 auto .3em auto;
+			padding: .3em 2.4em .3em 1.4em;
+			font-size: .9em;
+			-webkit-box-shadow          : 1px 3px 12px 1px rgba(0, 0, 0, .3);
+			box-shadow                  : 1px 3px 12px 1px rgba(0, 0, 0, .3);
+			pointer-events: all;
+
+			text-shadow: 0 1px 0 rgba(255,255,255,.2);
+
+			&[data-type="info"]{
+				@include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
+				@include alert-styles($alert-info-bg);
+			}
+
+			&[data-type="success"]{
+				@include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
+				@include alert-styles($alert-success-bg);
+			}
+
+			&[data-type="danger"]{
+				@include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+				background-color: #b51435;
+				border-color: #a7124a;
+				color: #fff;
+			}
+
+			&[data-type="warning"]{
+				@include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text);
+				background-color: #fe82ce;
+				border-color: #fe72df;
+				color: #b3016e;
+			}
+
+			.notifications__close{
+
+				position: absolute;
+				top: 3px;
+				right: 6px;
+
+				i.fa{
+					color: white;
+					font-size: 1.3em;
+				}
+
+			}
+
+		}
+
+	}
+
+}

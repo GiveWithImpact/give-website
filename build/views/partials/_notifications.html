@@ -1,0 +1,13 @@
+<div ng-if="alert_counter > 0" class="notifications">
+	<div ng-repeat="(idx, alert) in alerts" class="notifications__wrapper">
+		<div data-type="{{ alert.type }}" class="notifications__alert"
+		     data-index="{{ idx }}"
+		     data-sticky="{{ alert.sticky ? 'true' : 'false' }}"
+		     data-ts="{{ alert.ts }}"
+				>{{ alert.msg }}
+			<a href ng-click="deleteAlert(idx)" class="notifications__close">
+				<i class="fa fa-times-circle"></i>
+			</a>
+		</div>
+	</div>
+</div>

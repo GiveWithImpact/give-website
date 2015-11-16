@@ -1,0 +1,44 @@
+/* The loading indicator */
+#page-loader, .section-loader{
+
+	margin-top: 2em;
+	line-height: 2em;
+	text-align: center;
+	display: none;
+	color: $brand-primary;
+
+	i.fa{
+		font-size: 2em;
+	}
+
+	.loader-text{
+		font-size: 1.4em;
+	}
+
+}
+.section-loader{
+	display: block;
+
+	i.fa{
+		font-size: 2em;
+	}
+
+	.loader-text{
+		font-size: 1.4em;
+	}
+
+}
+
+/* The rest of the content */
+body[data-loading]{
+
+	overflow-x: hidden;
+
+	.page{
+		display: none;
+	}
+
+	#page-loader{
+		display: block;
+	}
+}

@@ -1,0 +1,125 @@
+/* UI-Bootstrap carousel icon font fix */
+.carousel-control .fa-chevron-left,
+.carousel-control .fa-chevron-right {
+	position: absolute;
+	top: 50%;
+	z-index: 5;
+	display: inline-block;
+}
+.carousel-control .fa-chevron-left {
+	left: 50%;
+	margin-left: -10px;
+}
+.carousel-control .fa-chevron-right {
+	right: 50%;
+	margin-right: -10px;
+}
+
+/* UI-Bootstrap href fix */
+.nav, .pagination, .carousel, .panel-title a {
+	cursor: pointer;
+}
+
+.badge{
+	&.badge-info{
+		background-color: $brand-info;
+	}
+}
+.modal-dialog{
+	margin-top: 0;
+}
+.modal-header{
+	color: #fff;
+	h1, h2, h3, h4{
+		color: #fff;
+		font-size: 1.2em;
+		margin: .2em;
+	}
+}
+.modal-content{
+	@include border-top-radius(0);
+}
+.modal-footer{
+	padding: 7px;
+}
+
+/* Table variants */
+.table{
+	&.table--fixed-width--35{
+		width: 35%;
+	}
+	&.table--fixed-width--70{
+		width: 70%;
+	}
+	td{
+		> img{
+			margin: 0 auto;
+		}
+	}
+}
+.error{
+	color: $brand-danger;
+}
+.well{
+	&.well-gray-light{
+		background-color: $gray-lighter;
+		border: 0 none;
+		border-top: 1px solid darken($gray-lighter, 15%);
+		color: $gray-darker;
+	}
+}
+.help-block {
+	&.text-warning{
+		color: $brand-warning;
+	}
+	&.text-danger{
+		color: $brand-danger;
+	}
+}
+
+.tab-content{
+	border: 0;
+}
+
+[href], [ng-click]{
+	cursor: pointer;
+}
+
+/* IE fix - https://github.com/twbs/bootstrap/issues/13996 */
+.img-responsive{
+	width: auto;
+	max-width: 100%;
+}
+
+.table > thead > tr > th{
+	vertical-align: top;
+}
+
+.table-shrink{
+	font-size: .9em;
+}
+
+.panel{
+	overflow: hidden; /* To prevent border radius bleed */
+}
+.panel-form-section{
+
+	ul.list-group{
+
+		margin-bottom: 0;
+
+	}
+
+	.list-group-item{
+
+		border-left: 0 none;
+		border-right: 0 none;
+		background-color: lighten($brand-default, 15%);
+
+		&:nth-child(even){
+			background-color: $gray-lighter;
+		}
+
+	}
+
+}

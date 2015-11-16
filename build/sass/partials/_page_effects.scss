@@ -1,0 +1,84 @@
+.view-wrapper, .viewport{
+
+	&.ng-enter{
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+		-webkit-animation: scaleUpCenter .4s ease-out both;
+		animation: scaleUpCenter .4s ease-out both;
+		-webkit-animation-delay: .2s;
+		animation-delay: .2s;
+		min-height: 100%;
+		z-index: 999;
+	}
+	&.ng-enter-active{
+		height: 100%;
+		overflow: hidden;
+	}
+	&.ng-leave {
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+		-webkit-animation: scaleDownCenter .4s ease-in both;
+		animation: scaleDownCenter .4s ease-in both;
+		z-index: 1;
+	}
+
+}
+
+.btn{
+
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+
+}
+
+.wizard-view__wrap{
+	&.ng-enter{
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+		-webkit-animation: scaleUpCenter .4s ease-out both;
+		animation: scaleUpCenter .4s ease-out both;
+		-webkit-animation-delay: .2s;
+		animation-delay: .2s;
+		min-height: 100%;
+		z-index: 999;
+	}
+	&.ng-enter-active{
+		height: 100%;
+		overflow: hidden;
+	}
+	&.ng-leave {
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+		-webkit-animation: scaleDownCenter .4s ease-in both;
+		animation: scaleDownCenter .4s ease-in both;
+		z-index: 1;
+	}
+}
+
+ol.breadcrumb{
+
+	li{
+
+		overflow: hidden;
+		height: 17px;
+
+		&.ng-enter{
+			-webkit-animation: moveFromRightFade .7s ease both;
+			animation: moveFromRightFade .7s ease both;
+			height: 17px;
+		}
+		&.ng-enter-active{
+			height: 17px;
+		}
+		&.ng-leave {
+			-webkit-animation: moveToLeftFade .7s ease both;
+			animation: moveToLeftFade .7s ease both;
+			height: 17px;
+		}
+
+	}
+
+}

@@ -1,0 +1,80 @@
+<div class="container" ng-controller="RegisterController">
+	<div class="row">
+
+		<div class="form-section col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+
+			<!-- Register button -->
+			<button type="button" ng-click="register_showing = true" ng-show="!register_showing"
+			        class="btn btn-primary btn-lg btn-block">
+				Register for impact...
+			</button>
+
+			<!-- Register form -->
+			<form name="RegisterForm" ng-submit="registerUser()" novalidate ng-show="register_showing">
+				<div class="panel panel-primary panel-form-section floater">
+
+					<div class="panel-heading">
+						<h3 class="panel-title">Register for project updates</h3>
+					</div>
+
+					<!-- Registration Fields -->
+					<ul class="list-group">
+
+						<!-- Name -->
+						<li class="list-group-item">
+							<fieldset class="form-group" ng-disabled="is_saving"
+							          ng-class="{ 'has-warning': RegisterForm.name.$dirty && RegisterForm.name.$invalid }">
+								<label for="give_register_name" class="col-sm-4 control-label">Your Name</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" required
+									       ng-model="user.name"
+									       name="name"
+									       id="give_register_name" />
+								</div>
+							</fieldset>
+						</li>
+
+						<!-- Email -->
+						<li class="list-group-item">
+							<fieldset class="form-group" ng-disabled="is_saving"
+							          ng-class="{ 'has-warning': RegisterForm.email.$dirty && RegisterForm.email.$invalid }">
+								<label for="give_register_email" class="col-sm-4 control-label">
+									Email Address
+								</label>
+								<div class="col-sm-8">
+									<input type="email" class="form-control" required
+									       ng-model="user.email"
+									       name="email"
+									       id="give_register_email" />
+									<span class="help-block text-warning"
+									      ng-show="RegisterForm.email.$dirty && RegisterForm.email.$invalid">
+											Invalid email address
+										</span>
+								</div>
+							</fieldset>
+						</li>
+
+					</ul>
+
+					<div class="panel-footer text-right">
+						<button ng-disabled="!RegisterForm.$dirty || RegisterForm.$invalid || is_saving"
+						        type="submit" class="btn btn-primary btn-md">Register
+						</button>
+					</div>
+
+				</div>
+			</form>
+
+		</div>
+
+		<div class="copy-section col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+			<p class="lead text-justify">
+				We believe in transparency. Sign up using our form to periodically
+				receive images that show exactly what happens with the money you donate to
+				support the cause.
+			</p>
+
+		</div>
+	</div>
+</div>

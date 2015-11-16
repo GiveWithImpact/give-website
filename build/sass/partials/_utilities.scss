@@ -1,0 +1,53 @@
+/* Firefox responsive table fix */
+@-moz-document url-prefix() {
+	fieldset { display: table-cell; }
+}
+
+.full-height{
+	height: 100%;
+}
+
+/* Hide button elements with no content - used to remove buttons from the $modal service */
+button:empty {
+	display: none;
+}
+
+/* Alignment tweaks */
+.flush--left{
+	padding-left: 0;
+	h1, h2, h3, h4, h5, h6{
+		margin-left: 0;
+	}
+}
+.flush--right{
+	padding-right: 0;
+	h1, h2, h3, h4, h5, h6{
+		margin-right: 0;
+	}
+}
+h2.flat-top{
+	margin-top: 0;
+}
+
+/**/
+/* bootstrap hack: fix content width inside hidden tabs */
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+	display: block;     /* undo display:none          */
+	height: 0;          /* height:0 is also invisible */
+	overflow-y: hidden; /* no-overflow                */
+}
+.tab-content > .active,
+.pill-content > .active {
+	height: auto;       /* let the content decide it  */
+} /* bootstrap hack end */
+
+/* Same hack above for the ui-bootstrap slider */
+
+/* Build styles */
+.block--primary{ background-color: $brand-primary; color: #fff; }
+.block--default{ background-color: $brand-default; }
+.block--success{ background-color: $brand-success; color: #fff; }
+.block--info{ background-color: $brand-info; color: #fff; }
+.block--warning{ background-color: $brand-warning; color: #fff; }
+.block--danger{ background-color: $brand-danger; color: #fff; }
