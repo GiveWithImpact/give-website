@@ -77,7 +77,7 @@ angular.module('give-website')
 							}
 						} else if ( response.result === 'success' ) {
 
-							$scope.addAlert('info', 'Registration is successful, please check your email for confirmation!');
+							$scope.addAlert('success', 'Registration is successful, please check your email for confirmation!');
 							$scope.is_saving = false;
 							$scope.register_showing = false;
 							$scope.RegisterForm.$setPristine();
