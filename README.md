@@ -12,8 +12,8 @@ A static website built using html5, bootstrap, angular, jquery, sass, npm and gr
   - concatenate all JS (but not minify)
   - Compile all SASS into CSS
   - minify CSS
-  - reload the page in the browser 
+  - load the page in the browser 
  
- All changes to .html files, .js files and .scss files will result in a rebuild and refresh of the open page (grunt livereload)
+All changes to .html files, .js files and .scss files will result in a rebuild and refresh of the open page (using the grunt task livereload).
 
 
