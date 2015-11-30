@@ -10,8 +10,8 @@ OAD.give = angular.module('give-website', [
 	'ngResource',
 	'ngSanitize',
 	'ngTouch',
-    'ui.bootstrap'//,
-    //'youtube-embed'
+    'ui.bootstrap',
+    'youtube-embed'
 ]);
 
 // Configuration setup

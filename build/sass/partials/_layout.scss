@@ -7,6 +7,10 @@ html, body {
 /* Page Layout */
 body {
 
+	&.scrolled-away{
+		padding-top: 100px;
+	}
+
 }
 
 .container {
@@ -62,14 +66,15 @@ body {
 }
 
 .page{
-	padding: .6em;
+	/*padding: .6em;*/
 }
 
 /* Header section */
 .app-header{
 
 	position: relative;
-	background-color: $brand-primary;
+	/*background-color: $brand-primary;*/
+	background-color: transparent;
 
 	.logo{
 		max-height: 60px;
@@ -92,6 +97,17 @@ body {
 	}
 
 }
+body.scrolled-away{
+	.app-header{
+		background-color: $brand-primary;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		width: 100%;
+	}
+}
+
 .dropdown-menu-right{
 	> li{
 		> a{
@@ -179,42 +195,25 @@ body {
 /* Video section */
 .video-section{
 
-	max-height: 400px;
+	margin-top: -100px;
+	background: transparent url('../img/background-1800.jpg') no-repeat center center;
+	background-size: cover;
+	padding: 120px 0 0;
 
 	.video-container{
 
 		position: relative;
-		max-height: 400px;
-		min-height: 200px;
 		max-width: 800px;
 		margin: 0 auto;
 		border: 2px solid $brand-primary;
 		@include border-radius(.3em);
-
-		.play-icon{
-
-			display: block;
-			position: absolute;
-			left: 50%;
-			top: 78px;
-			margin-left: -20px;
-			width: 40px;
-			height: 40px;
-			background: transparent url('../img/play-icon.png') no-repeat center center;
-			@include simple-transition(background);
-
-			&:hover{
-				background: transparent url('../img/play-icon-o.png') no-repeat center center;
-			}
-
-		}
 
 	}
 
 }
 @media screen and (min-width: $screen-sm-min){
 	.video-section{
-		margin-top: 1em;
+		padding: 140px 0 75px;
 	}
 }
 
@@ -254,10 +253,13 @@ body {
 
 }
 
-/* Normal home sections */
-.home-section{
+.home-section, .campaign-section{
 
 	padding: 2em 0;
+
+}
+
+.campaign-section{
 
 }
 

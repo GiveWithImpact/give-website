@@ -27,49 +27,23 @@
 			<!-- Video section -->
 			<section class="video-section">
 				<div class="video-container">
-					<a href ng-click="showTodo()" class="play-icon" uib-tooltip="Coming Soon!"></a>
+					<div class="embed-responsive embed-responsive-16by9">
+						<youtube-video class="embed-responsive-item" player_vars="{ wmode: 'opaque' }"
+						               video-url="'https://www.youtube.com/watch?v=NlUxJbOLHLo&wmode=opaque'"></youtube-video>
+					</div>
 				</div>
 			</section>
 
-			<!-- Campaign section -->
-			<section class="home-section campaign-section">
+			<!---->
+			<section class="home-section">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 
-							<h1 class="text-center">The Campaign: Thank You</h1>
+							<p class="lead text-center"><b>All proceeds from the sale of the song go to support the work of
+							refugee aid organizations across Europe.</b></p>
 
-							<p class="lead text-justify">
-								Since January 2015 more than one million refugees have left Syria for Europe to
-								escape terror, war and political oppression. The song "Thank you" highlights
-								the incredible efforts of the countless volunteers who are working tirelessly to
-								welcome the refugees in our countries, while sending a strong message that we
-								stand united against anyone who seeks to exploit this outpouring of support to
-								commit cowardly and brutal attacks on innocent civilians.
-							</p>
-
-							<p class="lead text-center"><b>
-								All proceeds from the sale of the song go to support the work of refugee aid
-								organizations across Europe.
-							</b></p>
-
-							<div class="buysong-section row">
-								<div class="col-sm-4">
-									<a href class="text-center" ng-click="showTodo()" uib-tooltip="Purchase 'Thank you' on iTunes">
-										<img src="img/buy-itunes.png" width="" class="img-responsive" />
-									</a>
-								</div>
-								<div class="col-sm-4">
-									<a href class="text-center" ng-click="showTodo()" uib-tooltip="Purchase 'Thank you' on Amazon">
-										<img src="img/buy-amazon.png" width="" class="img-responsive" />
-									</a>
-								</div>
-								<div class="col-sm-4">
-									<a href class="text-center" ng-click="showTodo()" uib-tooltip="Purchase 'Thank you' on PayPal">
-										<img src="img/buy-paypal.png" width="400" class="img-responsive" />
-									</a>
-								</div>
-							</div>
+							<!-- @@include('_buy-buttons.html') -->
 
 						</div>
 					</div>
@@ -78,8 +52,30 @@
 
 		</article>
 
+		<!-- Campaign section -->
+		<section class="full-width-layout block--default campaign-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+						<h1 class="text-center">The Campaign: Thank You</h1>
+
+						<p class="lead text-center">
+							Since January 2015 more than one million refugees have left Syria for Europe to
+							<b>escape terror, war and political oppression</b>. The song "Thank you" highlights
+							the incredible efforts of the countless volunteers who are <b>working tirelessly</b> to
+							welcome the refugees in our countries, while sending a strong message that <b>we
+							stand united</b> against anyone who seeks to exploit this outpouring of support to
+							commit cowardly and brutal attacks on innocent civilians.
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<!-- Register section -->
-		<section class="full-width-layout block--default register-section">
+		<section class="full-width-layout register-section">
 			<!-- @@include('_register.html') -->
 		</section>
 

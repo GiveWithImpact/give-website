@@ -84,7 +84,7 @@ angular.module('give-website').controller('AppController', [
 				},
 				{
 					title  : 'Under construction',
-					content: 'Please bear with us while we work hard at releasing this functionality!',
+					content: 'Please bear with us while we work at releasing this functionality!',
 					buttons: [
 						{
 							label     : 'Ok',
@@ -143,6 +143,19 @@ angular.module('give-website').controller('AppController', [
 				$rootScope.cleanUpAlerts,
 				OAD.ALERT_VISIBILITY_CHECKER_INTERVAL_SECS * 1000
 			);
+
+			// Handle the scroll header
+			var $scroller = $($window).eq(0);
+			var $body = $('body').eq(0);
+			$scroller.on('scroll', function(e) {
+
+				if ($scroller.scrollTop() > 1) {
+					$body.addClass('scrolled-away');
+				} else {
+					$body.removeClass('scrolled-away');
+				}
+
+			});
 
 			// Done
 			console.log('[INIT] App Initialised.');

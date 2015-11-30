@@ -26,7 +26,6 @@ angular.module('give-website')
 				Video event handlers
 			 */
 			$scope.$on('youtube.player.ready', function () {
-
 			});
 			$scope.$on('youtube.player.playing', function () {
 
