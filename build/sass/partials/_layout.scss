@@ -65,8 +65,10 @@ body {
 	padding: 0;
 }
 
-.page{
-	/*padding: .6em;*/
+.viewport{
+
+
+
 }
 
 /* Header section */
@@ -215,6 +217,26 @@ body.scrolled-away{
 	.video-section{
 		padding: 140px 0 75px;
 	}
+}
+
+/* Standard copy */
+.standard-content-block{
+
+	margin-top: -100px;
+	background: transparent url('../img/background-1800.jpg') no-repeat center center;
+	background-size: cover;
+	min-height: 600px;
+
+	.text-content{
+
+		padding-bottom: 7em;
+
+		h1, h2, h3, h4, h5, h6, p, li, a{
+			color: white !important;
+		}
+
+	}
+
 }
 
 .buysong-section{

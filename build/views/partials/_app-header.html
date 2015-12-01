@@ -4,7 +4,9 @@
 		<!-- Logo -->
 		<div class="col-sm-6">
 
-			<img src="img/logo-with-impact.png" width="429" alt="Give with Impact" class="logo img-responsive" />
+			<a href ui-sref="home">
+				<img src="img/logo-with-impact.png" width="429" alt="Give with Impact" class="logo img-responsive" />
+			</a>
 
 			<!-- Collapsed menu -->
 			<div class="visible-xs-inline-block btn-group main-menu-collapsed"
@@ -14,20 +16,20 @@
 				</button>
 				<ul class="uib-dropdown-menu dropdown-menu-right">
 					<li>
-						<a href ng-click="showTodo()" title="">About</a>
+						<a href ui-sref="about" title="About Give with Impact">About</a>
 					</li>
 					<li>
-						<a href ng-click="showTodo()" title="">Contact</a>
+						<a href ui-sref="contact" title="Contact Give with Impact">Contact</a>
 					</li>
 					<li class="divider"></li>
 					<li>
-						<a href ng-click="showTodo()" title="">Facebook</a>
+						<a href="https://www.facebook.com/givewithimpact/timeline" target="_blank" title="Socialise with Give with Impact on Facebook">Facebook</a>
 					</li>
 					<li>
-						<a href ng-click="showTodo()" title="">Twitter</a>
+						<a href="https://twitter.com/GivewithImpact" target="_blank" title="Follow Give with Impact on Twitter">Twitter</a>
 					</li>
 					<li>
-						<a href ng-click="showTodo()" title="">Instagram</a>
+						<a href="https://www.instagram.com/givewithimpact" target="_blank" title="Follow Give with Impact on Instagram">Instagram</a>
 					</li>
 				</ul>
 			</div>
@@ -44,27 +46,27 @@
 					<!-- Expanded menu -->
 					<ul class="main-menu list-inline pull-right">
 						<li>
-							<a href ng-click="showTodo()" title="">About</a>
+							<a href ui-sref="about" title="About Give with Impact">About</a>
 						</li>
 						<li>
-							<a href ng-click="showTodo()" title="">Contact</a>
+							<a href ui-sref="contact" title="Contact Give with Impact">Contact</a>
 						</li>
 					</ul>
 
 					<!-- Social Menu-->
 					<ul class="list-inline social-menu pull-right">
 						<li>
-							<a href ng-click="showTodo()" uib-tooltip="Facebook">
+							<a href="https://www.facebook.com/givewithimpact/timeline" target="_blank" title="Socialise with Give with Impact on Facebook">
 								<i class="fa fa-facebook"></i>
 							</a>
 						</li>
 						<li>
-							<a href ng-click="showTodo()" uib-tooltip="Twitter">
+							<a href="https://twitter.com/GivewithImpact" target="_blank" title="Follow Give with Impact on Twitter">
 								<i class="fa fa-twitter"></i>
 							</a>
 						</li>
 						<li>
-							<a href ng-click="showTodo()" uib-tooltip="Instagram">
+							<a href="https://www.instagram.com/givewithimpact" target="_blank" title="Follow Give with Impact on Instagram">
 								<i class="fa fa-instagram"></i>
 							</a>
 						</li>

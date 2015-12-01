@@ -27,9 +27,9 @@
 
 		<!-- Asset includes -->
 		<!-- Stylesheets -->
-<link href="css/themes/bootstrap.theme.min.354fdde459593390.css" rel="stylesheet" media="screen">
+<link href="css/themes/bootstrap.theme.min.745dd8250b37bca7.css" rel="stylesheet" media="screen">
 <link href="css/vendor/font-awesome.min.8c15c6bd82c71e9e.css" rel="stylesheet" media="screen">
-<link href="css/oad-spa.min.ce3aa776f71799df.css" rel="stylesheet" media="screen">
+<link href="css/oad-spa.min.32fedee08064291d.css" rel="stylesheet" media="screen">
 
 <!--[if lt IE 9]>
 <script src="bower_components/html5shiv/dist/html5shiv.min.e790c26449c57de2.js"></script>
@@ -78,7 +78,9 @@
 		<!-- Logo -->
 		<div class="col-sm-6">
 
-			<img src="img/logo-with-impact.396c73fb8699b811.png" width="429" alt="Give with Impact" class="logo img-responsive" />
+			<a href ui-sref="home">
+				<img src="img/logo-with-impact.b5f646c97e64025f.png" width="429" alt="Give with Impact" class="logo img-responsive" />
+			</a>
 
 			<!-- Collapsed menu -->
 			<div class="visible-xs-inline-block btn-group main-menu-collapsed"
@@ -88,20 +90,20 @@
 				</button>
 				<ul class="uib-dropdown-menu dropdown-menu-right">
 					<li>
-						<a href ng-click="showTodo()" title="">About</a>
+						<a href ui-sref="about" title="About Give with Impact">About</a>
 					</li>
 					<li>
-						<a href ng-click="showTodo()" title="">Contact</a>
+						<a href ui-sref="contact" title="Contact Give with Impact">Contact</a>
 					</li>
 					<li class="divider"></li>
 					<li>
-						<a href ng-click="showTodo()" title="">Facebook</a>
+						<a href="https://www.facebook.com/givewithimpact/timeline" target="_blank" title="Socialise with Give with Impact on Facebook">Facebook</a>
 					</li>
 					<li>
-						<a href ng-click="showTodo()" title="">Twitter</a>
+						<a href="https://twitter.com/GivewithImpact" target="_blank" title="Follow Give with Impact on Twitter">Twitter</a>
 					</li>
 					<li>
-						<a href ng-click="showTodo()" title="">Instagram</a>
+						<a href="https://www.instagram.com/givewithimpact" target="_blank" title="Follow Give with Impact on Instagram">Instagram</a>
 					</li>
 				</ul>
 			</div>
@@ -118,27 +120,27 @@
 					<!-- Expanded menu -->
 					<ul class="main-menu list-inline pull-right">
 						<li>
-							<a href ng-click="showTodo()" title="">About</a>
+							<a href ui-sref="about" title="About Give with Impact">About</a>
 						</li>
 						<li>
-							<a href ng-click="showTodo()" title="">Contact</a>
+							<a href ui-sref="contact" title="Contact Give with Impact">Contact</a>
 						</li>
 					</ul>
 
 					<!-- Social Menu-->
 					<ul class="list-inline social-menu pull-right">
 						<li>
-							<a href ng-click="showTodo()" uib-tooltip="Facebook">
+							<a href="https://www.facebook.com/givewithimpact/timeline" target="_blank" title="Socialise with Give with Impact on Facebook">
 								<i class="fa fa-facebook"></i>
 							</a>
 						</li>
 						<li>
-							<a href ng-click="showTodo()" uib-tooltip="Twitter">
+							<a href="https://twitter.com/GivewithImpact" target="_blank" title="Follow Give with Impact on Twitter">
 								<i class="fa fa-twitter"></i>
 							</a>
 						</li>
 						<li>
-							<a href ng-click="showTodo()" uib-tooltip="Instagram">
+							<a href="https://www.instagram.com/givewithimpact" target="_blank" title="Follow Give with Impact on Instagram">
 								<i class="fa fa-instagram"></i>
 							</a>
 						</li>
@@ -161,159 +163,7 @@
 	</div>
 </section>
 
-		<!-- Home page area -->
-		<article class="full-width-layout page" ng-controller="HomeController">
-
-			<!-- Video section -->
-			<section class="video-section">
-				<div class="video-container">
-					<div class="embed-responsive embed-responsive-16by9">
-						<youtube-video class="embed-responsive-item" player_vars="{ wmode: 'opaque' }"
-						               video-url="'https://www.youtube.com/watch?v=NlUxJbOLHLo&wmode=opaque'"></youtube-video>
-					</div>
-				</div>
-			</section>
-
-			<!---->
-			<section class="home-section">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-
-							<p class="lead text-center"><b>All proceeds from the sale of the song go to support the work of
-							refugee aid organizations across Europe.</b></p>
-
-							<div class="buysong-section row">
-	<div class="col-sm-4">
-		<a href class="text-center" ng-click="showTodo()" uib-tooltip="Purchase 'Thank you' on iTunes">
-			<img src="img/buy-itunes.fef03b4566fa0320.png" width="" class="img-responsive" />
-		</a>
-	</div>
-	<div class="col-sm-4">
-		<a href class="text-center" ng-click="showTodo()" uib-tooltip="Purchase 'Thank you' on Amazon">
-			<img src="img/buy-amazon.8eebaaab68d814ca.png" width="" class="img-responsive" />
-		</a>
-	</div>
-	<div class="col-sm-4">
-		<a href class="text-center" ng-click="showTodo()" uib-tooltip="Purchase 'Thank you' on PayPal">
-			<img src="img/buy-paypal.dd831acf2cc48d03.png" width="400" class="img-responsive" />
-		</a>
-	</div>
-</div>
-
-						</div>
-					</div>
-				</div>
-			</section>
-
-		</article>
-
-		<!-- Campaign section -->
-		<section class="full-width-layout block--default campaign-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-
-						<h1 class="text-center">The Campaign: Thank You</h1>
-
-						<p class="lead text-center">
-							Since January 2015 more than one million refugees have left Syria for Europe to
-							<b>escape terror, war and political oppression</b>. The song "Thank you" highlights
-							the incredible efforts of the countless volunteers who are <b>working tirelessly</b> to
-							welcome the refugees in our countries, while sending a strong message that <b>we
-							stand united</b> against anyone who seeks to exploit this outpouring of support to
-							commit cowardly and brutal attacks on innocent civilians.
-						</p>
-
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Register section -->
-		<section class="full-width-layout register-section">
-			<div class="container" ng-controller="RegisterController">
-	<div class="row">
-
-		<div class="form-section col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-
-			<!-- Register button -->
-			<button type="button" ng-click="register_showing = true" ng-show="!register_showing"
-			        class="btn btn-primary btn-lg btn-block">
-				Register for impact...
-			</button>
-
-			<!-- Register form -->
-			<form name="RegisterForm" ng-submit="registerUser()" novalidate ng-show="register_showing">
-
-				<div class="panel panel-primary panel-form-section floater">
-
-					<div class="panel-heading">
-						<h3 class="panel-title">Register for project updates</h3>
-					</div>
-
-					<!-- Registration Fields -->
-					<ul class="list-group">
-
-						<!-- Name -->
-						<li class="list-group-item">
-							<fieldset class="form-group" ng-disabled="is_saving"
-							          ng-class="{ 'has-warning': RegisterForm.name.$dirty && RegisterForm.name.$invalid }">
-								<label for="give_register_name" class="col-sm-4 control-label">Your Name</label>
-								<div class="col-sm-8">
-									<input type="text" class="form-control" required
-									       ng-model="user.name"
-									       name="name"
-									       id="give_register_name" />
-								</div>
-							</fieldset>
-						</li>
-
-						<!-- Email -->
-						<li class="list-group-item">
-							<fieldset class="form-group" ng-disabled="is_saving"
-							          ng-class="{ 'has-warning': RegisterForm.email.$dirty && RegisterForm.email.$invalid }">
-								<label for="give_register_email" class="col-sm-4 control-label">
-									Email Address
-								</label>
-								<div class="col-sm-8">
-									<input type="email" class="form-control" required
-									       ng-model="user.email"
-									       name="email"
-									       id="give_register_email" />
-									<span class="help-block text-warning"
-									      ng-show="RegisterForm.email.$dirty && RegisterForm.email.$invalid">
-											Invalid email address
-										</span>
-								</div>
-							</fieldset>
-						</li>
-
-					</ul>
-
-					<div class="panel-footer text-right">
-						<button ng-disabled="!RegisterForm.$dirty || RegisterForm.$invalid || is_saving"
-						        type="submit" class="btn btn-primary btn-md">Register
-						</button>
-					</div>
-
-				</div>
-			</form>
-
-		</div>
-
-		<div class="copy-section col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-
-			<p class="lead text-justify">
-				We believe in transparency. Sign up using our form to periodically
-				receive images that show exactly what happens with the money you donate to
-				support the cause.
-			</p>
-
-		</div>
-	</div>
-</div>
-		</section>
+		<div class="viewport" ui-view></div>
 
 		<!-- App footer -->
 		<footer class="full-width-layout app-footer">
@@ -330,9 +180,9 @@
 		
 <script src="https://www.youtube.com/iframe_api"></script>
 <script src="bower_components/angular-youtube-mb/dist/angular-youtube-embed.min.b21ee3448ec0073c.js"></script>
-<script src="js/conf.min.0d2ed9f63a7ede5b.js"></script>
-<script src="js/app.min.497ade4881fc4e82.js"></script>
-<script src="js/oad-spa.min.04234139ec0ab188.js"></script>
+<script src="js/conf.min.53d46d06736c4265.js"></script>
+<script src="js/app.min.7d9875266032c2c8.js"></script>
+<script src="js/oad-spa.min.83e422968885e49b.js"></script>
 
 
 	</body>

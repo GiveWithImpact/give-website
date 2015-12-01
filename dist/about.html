@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie ie6" ng-app="give-website"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="ie ie7" ng-app="give-website"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="ie ie8" ng-app="give-website"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="ie ie9" ng-app="give-website"> <![endif]-->
+<!--[if !(IE)]><!--> <html lang="en" ng-app="give-website"> <!--<![endif]-->
+	<head>
+
+		<!-- Meta includes -->
+		<meta charset="utf-8">
+<meta http-equiv="cache-control" content="no-cache, no-store">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="">
+<meta name="author" content="Barry Jones <bjones@wallstreetdocs.com>">
+<base href="/" />
+<title>Give! with Impact</title>
+
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="img/Icon-60@2x.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="img/Icon-60@3x.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="img/Icon-76.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="img/Icon-76@2x.png" />
+<link rel="apple-touch-icon" sizes="58x58" href="img/Icon-Small@2x.png" />
+
+		<!-- Asset includes -->
+		<!-- Stylesheets -->
+<link href="css/themes/bootstrap.theme.min.css" rel="stylesheet" media="screen">
+<link href="css/vendor/font-awesome.min.css" rel="stylesheet" media="screen">
+<link href="css/oad-spa.min.css" rel="stylesheet" media="screen">
+
+<!--[if lt IE 9]>
+<script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+<script src="bower_components/respond/dest/respond.min.js"></script>
+<![endif]-->
+
+<!-- Core libraries -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/lodash/lodash.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="js/vendor/modernizr.custom.html5only.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+<script src="bower_components/moment/min/moment-with-locales.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="bower_components/angular-touch/angular-touch.min.js"></script>
+
+
+	</head>
+	<body data-loading ng-controller="AppController">
+
+		<!-- Notifications widget area -->
+		<div ng-if="alert_counter > 0" class="notifications">
+	<div ng-repeat="(idx, alert) in alerts" class="notifications__wrapper">
+		<div data-type="{{ alert.type }}" class="notifications__alert"
+		     data-index="{{ idx }}"
+		     data-sticky="{{ alert.sticky ? 'true' : 'false' }}"
+		     data-ts="{{ alert.ts }}"
+				>{{ alert.msg }}
+			<a href ng-click="deleteAlert(idx)" class="notifications__close">
+				<i class="fa fa-times-circle"></i>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+		<!-- App Header -->
+		<header class="full-width-layout app-header">
+			<section class="container-fluid">
+	<div class="row">
+
+		<!-- Logo -->
+		<div class="col-sm-6">
+
+			<img src="img/logo-with-impact.png" width="429" alt="Give with Impact" class="logo img-responsive" />
+
+			<!-- Collapsed menu -->
+			<div class="visible-xs-inline-block btn-group main-menu-collapsed"
+			     uib-dropdown dropdown-append-to-body is-open="mainnav.isopen">
+				<button type="button" class="btn btn-primary" uib-dropdown-toggle>
+					<i class="fa fa-bars fa-2x"></i>
+				</button>
+				<ul class="uib-dropdown-menu dropdown-menu-right">
+					<li>
+						<a href="/about" title="">About</a>
+					</li>
+					<li>
+						<a href ng-click="showTodo()" title="">Contact</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="https://www.facebook.com/givewithimpact/timeline" target="_blank" title="">Facebook</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/GivewithImpact" target="_blank" title="">Twitter</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/givewithimpact" target="_blank" title="">Instagram</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<!-- Large-screen navigation -->
+		<div class="hidden-xs col-sm-6">
+			<div class="row">
+
+				<!-- Menu area -->
+				<div class="col-sm-12 text-right">
+
+					<!-- Expanded menu -->
+					<ul class="main-menu list-inline pull-right">
+						<li>
+							<a href ng-click="showTodo()" title="">About</a>
+						</li>
+						<li>
+							<a href ng-click="showTodo()" title="">Contact</a>
+						</li>
+					</ul>
+
+					<!-- Social Menu-->
+					<ul class="list-inline social-menu pull-right">
+						<li>
+							<a href="https://www.facebook.com/givewithimpact/timeline" target="_blank" uib-tooltip="Facebook">
+								<i class="fa fa-facebook"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/GivewithImpact" target="_blank" uib-tooltip="Twitter">
+								<i class="fa fa-twitter"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/givewithimpact" target="_blank" uib-tooltip="Instagram">
+								<i class="fa fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</section>
+		</header>
+
+		<!-- Loader -->
+		<section id="page-loader" class="container-fluid">
+	<div class="row">
+		<div class="loader-text col-xs-12">
+			<i class="fa fa-cog fa-spin"></i>
+		</div>
+	</div>
+</section>
+
+		<!-- Home page area -->
+		<article class="full-width-layout page" ng-controller="HomeController">
+
+			<!-- Video section -->
+			<section class="video-section">
+				<div class="video-container">
+					<div class="embed-responsive embed-responsive-16by9">
+						<youtube-video class="embed-responsive-item" player_vars="{ wmode: 'opaque' }"
+						               video-url="'https://www.youtube.com/watch?v=NlUxJbOLHLo&wmode=opaque'"></youtube-video>
+					</div>
+				</div>
+			</section>
+
+			<!---->
+			<section class="home-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+							<p class="lead text-center"><b>All proceeds from the sale of the song go to support the work of
+							refugee aid organizations across Europe.</b></p>
+
+							<div class="buysong-section row">
+	<div class="col-sm-4">
+		<a href class="text-center" ng-click="showTodo()" uib-tooltip="Purchase 'Thank you' on iTunes">
+			<img src="img/buy-itunes.png" width="" class="img-responsive" />
+		</a>
+	</div>
+	<div class="col-sm-4">
+		<a href class="text-center" ng-click="showTodo()" uib-tooltip="Purchase 'Thank you' on Amazon">
+			<img src="img/buy-amazon.png" width="" class="img-responsive" />
+		</a>
+	</div>
+	<div class="col-sm-4">
+		<a href class="text-center" ng-click="showTodo()" uib-tooltip="Purchase 'Thank you' on PayPal">
+			<img src="img/buy-paypal.png" width="400" class="img-responsive" />
+		</a>
+	</div>
+</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</article>
+
+		<!-- Campaign section -->
+		<section class="full-width-layout block--default campaign-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+						<h1 class="text-center">The Campaign: Thank You</h1>
+
+						<p class="lead text-center">
+							Since January 2015 more than one million refugees have left Syria for Europe to
+							<b>escape terror, war and political oppression</b>. The song "Thank you" highlights
+							the incredible efforts of the countless volunteers who are <b>working tirelessly</b> to
+							welcome the refugees in our countries, while sending a strong message that <b>we
+							stand united</b> against anyone who seeks to exploit this outpouring of support to
+							commit cowardly and brutal attacks on innocent civilians.
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Register section -->
+		<section class="full-width-layout register-section">
+			<div class="container" ng-controller="RegisterController">
+	<div class="row">
+
+		<div class="form-section col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+
+			<!-- Register button -->
+			<button type="button" ng-click="register_showing = true" ng-show="!register_showing"
+			        class="btn btn-primary btn-lg btn-block">
+				Register for impact...
+			</button>
+
+			<!-- Register form -->
+			<form name="RegisterForm" ng-submit="registerUser()" novalidate ng-show="register_showing">
+
+				<div class="panel panel-primary panel-form-section floater">
+
+					<div class="panel-heading">
+						<h3 class="panel-title">Register for project updates</h3>
+					</div>
+
+					<!-- Registration Fields -->
+					<ul class="list-group">
+
+						<!-- Name -->
+						<li class="list-group-item">
+							<fieldset class="form-group" ng-disabled="is_saving"
+							          ng-class="{ 'has-warning': RegisterForm.name.$dirty && RegisterForm.name.$invalid }">
+								<label for="give_register_name" class="col-sm-4 control-label">Your Name</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" required
+									       ng-model="user.name"
+									       name="name"
+									       id="give_register_name" />
+								</div>
+							</fieldset>
+						</li>
+
+						<!-- Email -->
+						<li class="list-group-item">
+							<fieldset class="form-group" ng-disabled="is_saving"
+							          ng-class="{ 'has-warning': RegisterForm.email.$dirty && RegisterForm.email.$invalid }">
+								<label for="give_register_email" class="col-sm-4 control-label">
+									Email Address
+								</label>
+								<div class="col-sm-8">
+									<input type="email" class="form-control" required
+									       ng-model="user.email"
+									       name="email"
+									       id="give_register_email" />
+									<span class="help-block text-warning"
+									      ng-show="RegisterForm.email.$dirty && RegisterForm.email.$invalid">
+											Invalid email address
+										</span>
+								</div>
+							</fieldset>
+						</li>
+
+					</ul>
+
+					<div class="panel-footer text-right">
+						<button ng-disabled="!RegisterForm.$dirty || RegisterForm.$invalid || is_saving"
+						        type="submit" class="btn btn-primary btn-md">Register
+						</button>
+					</div>
+
+				</div>
+			</form>
+
+		</div>
+
+		<div class="copy-section col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+			<p class="lead text-justify">
+				We believe in transparency. Sign up using our form to periodically
+				receive images that show exactly what happens with the money you donate to
+				support the cause.
+			</p>
+
+		</div>
+	</div>
+</div>
+		</section>
+
+		<!-- App footer -->
+		<footer class="full-width-layout app-footer">
+			<section class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<p>&copy; 2015 – Give With Impact, Ltd. All Rights Reserved.</p>
+		</div>
+	</div>
+</section>
+		</footer>
+
+		<!-- Application Scripts -->
+		
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="bower_components/angular-youtube-mb/dist/angular-youtube-embed.min.js"></script>
+<script src="js/conf.min.js"></script>
+<script src="js/app.min.js"></script>
+<script src="js/oad-spa.min.js"></script>
+
+
+	</body>
+</html>

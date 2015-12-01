@@ -28,9 +28,31 @@ OAD.give.config([
 		// Now set up the view/route states
 		$stateProvider
 
-			// Home view
+			// Home
 			.state('home', {
-				url: "/"
+
+				url         : '/',
+				templateUrl : "views/home.html",
+				controller  : 'HomeController'
+
+			})
+
+			// Home
+			.state('about', {
+
+				url         : '/about',
+				templateUrl : "views/about.html",
+				controller  : 'AboutController'
+
+			})
+
+			// Home
+			.state('contact', {
+
+				url         : '/contact',
+				templateUrl : "views/contact.html",
+				controller  : 'ContactController'
+
 			})
 
 		;

@@ -27,14 +27,14 @@ angular.module('give-website')
 				var names = $scope.user.name.split(' ');
 
 				var MailChimpSubscription = $resource(
-					'//onalldevices.us4.list-manage.com/subscribe/post-json',
+					'//givewithimpact.us12.list-manage.com/subscribe/post-json',
 					{
 						'EMAIL': $scope.user.email,
 						'FNAME': names[0],
 						'LNAME': (names.length > 1 ? names[1] : ''),
 						'c'    : 'JSON_CALLBACK',
-						'u'    : '1d32c7060479b9d153e967d47',
-						'id'   : '07b97cfe1d'
+						'u'    : '0018d06d9acc860bc57431c3c',
+						'id'   : '1a1f06f6e6'
 					},
 					{
 						'save': {

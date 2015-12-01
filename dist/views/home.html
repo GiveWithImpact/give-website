@@ -1,294 +1,153 @@
-<div class="container-fluid homepage-view">
+<!-- Home page area -->
+<article class="full-width-layout page">
 
-	<!-- Carousel section - full width -->
-	<div class="row layout-panel layout-panel--darkblue layout-panel--carousel">
-		<div class="col-xs-12 fat-free">
-
-			<carousel interval="Carousel.interval" no-wrap="Carousel.no_wrap_slides">
-				<slide active="slide1_active">
-					<div class="home-carousel">
-
-						<!-- 1. Structured products video -->
-						<div class="home-carousel__slide" ng-click="showLockedCopyModal()">
-
-							<h2>Learn About Structured Products</h2>
-
-							<div class="media-content">
-								<div class="embed-responsive embed-responsive-16by9">
-									<youtube-video class="embed-responsive-item" video-id="'Jo2HmViNBD8'"
-									               player-width="'100%'"></youtube-video>
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-				</slide>
-				<slide active="slide2_active">
-					<div class="home-carousel">
-
-						<!-- 2. Derivatives Map -->
-						<div class="home-carousel__slide" ng-click="showLockedCopyModal()">
-
-							<h2>Derivatives Map</h2>
-
-							<div class="media-content">
-								<div class="embed-responsive embed-responsive-16by9">
-									<img src="/img/homepage/derivatives-map.png" width="555"
-									     class="img-responsive" alt="Derivatives Map Link" />
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-				</slide>
-				<slide active="slide3_active">
-					<div class="home-carousel">
-
-						<!-- 3. Certification -->
-						<div class="home-carousel__slide" ng-click="showLockedCopyModal()">
-
-							<h2>Certification</h2>
-
-							<div class="media-content media-content--wide">
-								<div class="embed-responsive embed-responsive-16by9">
-									<img src="/img/homepage/certification.png" width="800"
-									     class="img-responsive" alt="Certification Link" />
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-				</slide>
-			</carousel>
-
-		</div>
-	</div>
-
-	<!-- Stay Abreast of the Market section - full width -->
-	<div class="row layout-panel layout-panel--white">
-		<div class="col-xs-12">
-
-			<!-- Section content - fixed width -->
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-
-						<h2 class="text-center">Stay Abreast of the Market</h2>
-
-						<div class="row">
-							<div class="col-xs-4">
-								<img class="img-responsive" src="/img/homepage/daily-market-updates.png"
-								     alt="Market updates" width="135"/>
-							</div>
-
-							<div class="col-xs-8">
-								<h4>Daily Market Updates</h4>
-
-								<p>Sign up for our automatically generated daily market updates, giving you an instant
-								   overview of what payoffs and underlyings people are looking at.</p>
-
-							</div>
-						</div>
-
-					</div>
-				</div>
+	<!-- Video section -->
+	<section class="video-section">
+		<div class="video-container">
+			<div class="embed-responsive embed-responsive-16by9">
+				<youtube-video class="embed-responsive-item" player_vars="{ wmode: 'opaque' }"
+				               video-url="'https://www.youtube.com/watch?v=NlUxJbOLHLo&wmode=opaque'"></youtube-video>
 			</div>
-
 		</div>
+	</section>
+
+	<!---->
+	<section class="home-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+					<p class="lead text-center"><b>All proceeds from the sale of the song go to support the work of
+					                               refugee aid organizations across Europe.</b></p>
+
+					<div class="buysong-section row">
+	<div class="col-sm-4">
+		<a href class="text-center" ng-click="showTodo()" uib-tooltip="Purchase 'Thank you' on iTunes">
+			<img src="img/buy-itunes.png" width="" class="img-responsive" />
+		</a>
 	</div>
-
-	<!-- Understand the jargon section - full width -->
-	<div class="row layout-panel layout-panel--lightgray">
-		<div class="col-xs-12">
-
-			<!-- Section content - fixed width -->
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-
-						<h2 class="text-center">Understand the Jargon</h2>
-
-						<div class="row">
-							<div class="col-xs-4">
-								<div class="padbox--thick">
-									<a href ng-click="showLockedCopyModal()" class="cta-block cta-block--tutorials">
-										<div same_height_as_width class="cta-block__inner">
-
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-xs-4">
-								<div class="padbox--thick">
-									<a href ng-click="showLockedCopyModal()" class="cta-block cta-block--glossary">
-										<div same_height_as_width class="cta-block__inner">
-
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-xs-4">
-								<div class="padbox--thick">
-									<a href ng-click="showLockedCopyModal()" class="cta-block cta-block--derivatives">
-										<div same_height_as_width class="cta-block__inner">
-
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-xs-4">
-								<div class="padbox--thick">
-									<h4 class="text-center">Tutorials</h4>
-								</div>
-							</div>
-							<div class="col-xs-4">
-								<div class="padbox--thick">
-									<h4 class="text-center">Glossary</h4>
-								</div>
-							</div>
-							<div class="col-xs-4">
-								<div class="padbox--thick">
-									<h4 class="text-center">Derivates Map</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-xs-4">
-								<p class="text-center">Learn basic investment concepts, how structured products work and
-								                       how they fit in a
-								                       portfolio.</p>
-							</div>
-							<div class="col-xs-4">
-								<p class="text-center">Talk the talk with our glossary of more than 1,500 terms of art
-								                       related to structured
-								                       products.</p>
-							</div>
-							<div class="col-xs-4">
-								<div class="row fat-free">
-									<div class="col-xs-8">
-										<p class="text-right">Download our handy map of the most popular payoffs.</p>
-									</div>
-									<div class="col-xs-4">
-										<a href ng-click="showLockedCopyModal()" class="thumbnail-link">
-											<img src="/img/homepage/derivatives-map-growth-thumb-250.png"
-											     class="img-responsive" width="250"/></a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-		</div>
+	<div class="col-sm-4">
+		<a href class="text-center" ng-click="showTodo()" uib-tooltip="Purchase 'Thank you' on Amazon">
+			<img src="img/buy-amazon.png" width="" class="img-responsive" />
+		</a>
 	</div>
-
-	<!-- Get Certified section - full width -->
-	<div class="row layout-panel layout-panel--white">
-		<div class="col-xs-12">
-
-			<!-- Section content - fixed width -->
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-sm-offset-3">
-
-						<h2 class="text-center">Get Certified</h2>
-
-						<div class="row">
-							<div class="col-xs-4">
-								<div class="padbox--thick">
-									<a href ng-click="showLockedCopyModal()" class="cta-block cta-block--certification">
-										<div same_height_as_width class="cta-block__inner">
-
-										</div>
-									</a>
-								</div>
-							</div>
-
-							<div class="col-xs-8">
-								<h4>E-Learning Center</h4>
-
-								<p>Take our knowledge tests and demonstrate to regulators, issuers and clients that you
-								   understand the ins and outs of structured products</p>
-
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-		</div>
+	<div class="col-sm-4">
+		<a href class="text-center" ng-click="showTodo()" uib-tooltip="Purchase 'Thank you' on PayPal">
+			<img src="img/buy-paypal.png" width="400" class="img-responsive" />
+		</a>
 	</div>
-
-	<!-- Home footer section - full width -->
-	<div class="row layout-panel layout-panel--darkgray home-footer">
-		<div class="col-xs-12">
-
-			<!-- Section content - fixed width -->
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="row padbox--thicker">
-							<div class="col-xs-8">
-								<h4 class="text-left">About Us</h4>
-
-								<p>TranspariTrade is a comprehensive web-based education platform for structured
-								   products. TranspariTrade offers tutorials, certification, a derivatives map and an
-								   explorer which helps retail investors analyze the risk/return of different
-								   underlyings and understand how they can use structured products to modify that
-								   profile in a way that helps them achieve their investment goals.</p>
-							</div>
-							<div class="col-xs-4">
-								<h4 class="text-left">Contact Us</h4>
-								<table class="table table-condensed address-list">
-									<tbody>
-										<tr>
-											<th><i class="fa fa-envelope-o"></i></th>
-											<td><a href="mailto:">info@transparitrade.com</a></td>
-										</tr>
-										<tr>
-											<th><i class="fa fa-phone"></i></th>
-											<td><a href="tel:+442070732834">+44 207 073 2834</a></td>
-										</tr>
-										<tr>
-											<th><i class="fa fa-home"></i></th>
-											<td>
-												<address>
-													<b>United States</b> <i class="flag-icon flag-icon-us"></i><br />
-													14 Wall Street<br />
-													New York, NY 10005
-												</address>
-											</td>
-										</tr>
-										<tr>
-											<th><i class="fa fa-home"></i></th>
-											<td>
-												<address>
-													<b>United Kingdom</b> <i class="flag-icon flag-icon-gb"></i><br />
-													11-12 Tokenhouse Yard<br />
-													London EC2R 7AS
-												</address>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
 </div>
 
+				</div>
+			</div>
+		</div>
+	</section>
+
+</article>
+
+<!-- Campaign section -->
+<section class="full-width-layout block--default campaign-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+				<h1 class="text-center">The Campaign: Thank You</h1>
+
+				<p class="lead text-center">
+					Since January 2015 more than one million refugees have left Syria for Europe to
+					<b>escape terror, war and political oppression</b>. The song "Thank you" highlights
+					the incredible efforts of the countless volunteers who are <b>working tirelessly</b> to
+					welcome the refugees in our countries, while sending a strong message that <b>we
+					                                                                              stand united</b> against anyone who seeks to exploit this outpouring of support to
+					commit cowardly and brutal attacks on innocent civilians.
+				</p>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Register section -->
+<section class="full-width-layout register-section">
+	<div class="container" ng-controller="RegisterController">
+	<div class="row">
+
+		<div class="form-section col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+
+			<!-- Register button -->
+			<button type="button" ng-click="register_showing = true" ng-show="!register_showing"
+			        class="btn btn-primary btn-lg btn-block">
+				Register for impact...
+			</button>
+
+			<!-- Register form -->
+			<form name="RegisterForm" ng-submit="registerUser()" novalidate ng-show="register_showing">
+
+				<div class="panel panel-primary panel-form-section floater">
+
+					<div class="panel-heading">
+						<h3 class="panel-title">Register for project updates</h3>
+					</div>
+
+					<!-- Registration Fields -->
+					<ul class="list-group">
+
+						<!-- Name -->
+						<li class="list-group-item">
+							<fieldset class="form-group" ng-disabled="is_saving"
+							          ng-class="{ 'has-warning': RegisterForm.name.$dirty && RegisterForm.name.$invalid }">
+								<label for="give_register_name" class="col-sm-4 control-label">Your Name</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" required
+									       ng-model="user.name"
+									       name="name"
+									       id="give_register_name" />
+								</div>
+							</fieldset>
+						</li>
+
+						<!-- Email -->
+						<li class="list-group-item">
+							<fieldset class="form-group" ng-disabled="is_saving"
+							          ng-class="{ 'has-warning': RegisterForm.email.$dirty && RegisterForm.email.$invalid }">
+								<label for="give_register_email" class="col-sm-4 control-label">
+									Email Address
+								</label>
+								<div class="col-sm-8">
+									<input type="email" class="form-control" required
+									       ng-model="user.email"
+									       name="email"
+									       id="give_register_email" />
+									<span class="help-block text-warning"
+									      ng-show="RegisterForm.email.$dirty && RegisterForm.email.$invalid">
+											Invalid email address
+										</span>
+								</div>
+							</fieldset>
+						</li>
+
+					</ul>
+
+					<div class="panel-footer text-right">
+						<button ng-disabled="!RegisterForm.$dirty || RegisterForm.$invalid || is_saving"
+						        type="submit" class="btn btn-primary btn-md">Register
+						</button>
+					</div>
+
+				</div>
+			</form>
+
+		</div>
+
+		<div class="copy-section col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+			<p class="lead text-justify">
+				We believe in transparency. Sign up using our form to periodically
+				receive images that show exactly what happens with the money you donate to
+				support the cause.
+			</p>
+
+		</div>
+	</div>
+</div>
+</section>
