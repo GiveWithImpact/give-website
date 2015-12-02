@@ -227,6 +227,12 @@ body.scrolled-away{
 	background-size: cover;
 	min-height: 600px;
 
+	> .container{
+
+		padding-top: 100px;
+
+	}
+
 	.text-content{
 
 		padding-bottom: 7em;
