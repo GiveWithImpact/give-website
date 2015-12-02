@@ -11,7 +11,7 @@
 	_ns.ENVIRONMENT = 'development'; //'development';
 
 	// App version - increment this to force the app to clear local storage before continuing
-	_ns.VERSION = '0.0.3';
+	_ns.VERSION = '0.0.31';
 
 	// Alerts constants
 	_ns.ALERT_VISIBILITY_PERIOD_SECS = 5;
